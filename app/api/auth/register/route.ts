@@ -5,6 +5,9 @@ import {generateToken, hashPassword} from "@/app/lib/auth";
 import {Role} from "@/app/types";
 
 export async function POST(request: NextRequest) {
+
+    console.log('JWT_SECRET present?', !!process.env.JWT_SECRET);
+    console.log('JWT_SECRET value:', process.env.JWT_SECRET);
     try {
         const {name, email, password, teamCode} = await request.json();
         if (!name || !email || !password) {

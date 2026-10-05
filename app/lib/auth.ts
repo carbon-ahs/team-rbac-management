@@ -8,7 +8,7 @@ if (!process.env.JWT_SECRET) {
     throw new Error("JWT_SECRET is not defined");
 }
 
-const JWT_SECRET = process.env.JWT_SECRETE as string;
+const JWT_SECRET = process.env.JWT_SECRET as string;
 
 export const hashPassword = async (password: string): Promise<string> => {
     return bcrypt.hash(password, 12);
