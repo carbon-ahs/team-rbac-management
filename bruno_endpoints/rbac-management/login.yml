@@ -1,0 +1,23 @@
+info:
+  name: login
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: http://localhost:3000/api/auth/login
+  body:
+    type: json
+    data: |-
+      {
+        "email": "shehanuk.ahsan1@gmail.com",
+        "password": "1234"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false
